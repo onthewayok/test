@@ -38,14 +38,14 @@ git log --graph --pretty=format:'%C(yellow)%h%Creset -%C(cyan)%d%Creset %s %Cgre
 
 git log --graph --pretty=format:'%Cblue%ci%Creset - %Cred%h%Creset%C(cyan)%d%Creset - %C(yellow)%an<%ae>%Creset %Cgreen%s%Creset %Cred(%ar)'
 
----下面这句是综合后的log格式化，最好
+---下面这句是综合后的log格式化，最好-------------
 git log --graph --pretty=format:'%Cblue%cd%Creset - %Cred%h%Creset%C(cyan)%d%Creset - %C(yellow)%an<%ae>%Creset %Cgreen%s%Creset %Cred(%ar)' --date=format:'%Y-%m-%d %H:%M:%S'
 
 加入别名
 git config --global alias.lg "log --graph --pretty=format:'%Cblue%cd%Creset - %Cred%h%Creset%C(cyan)%d%Creset - %C(yellow)%an<%ae>%Creset %Cgreen%s%Creset %Cred(%ar)' --date=format:'%Y-%m-%d %H:%M:%S'"
 
 使用 git lg 就能使用
-
+------------------------------------------------
 
 Git diff 常见用法
  　Git diff
