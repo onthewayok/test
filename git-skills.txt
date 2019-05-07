@@ -27,6 +27,8 @@ git reflog	记录本地仓库的每次操作日志
 
 git show <hashcode>	查看指定的操作日志
 
+git cat-file -p <hashcode> 查看对象tree信息等相关内容
+
 git checkout <file>	还原被删除（修改）的文件
 
 git log --graph --pretty=format:"%Cblue%ci - %Cred%h - %C(yellow)%ae%Creset(%an) %Cgreen%s (%Cred%ar)"
