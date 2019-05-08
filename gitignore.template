@@ -1,0 +1,35 @@
+# temp ignore
+logs/
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# Operating System Files
+*.DS_Store
+Thumbs.db
+*.sw?
+.#*
+*#
+*~
+*.sublime-*
+.gitignore
+
+# Build Artifacts 
+.gradle/
+build/
+target/
+bin/
+dependency-reduced-pom.xml
+
+# Eclipse Project Files 
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA Files 
+*.iml
+*.ipr
+*.iws
+*.idea
