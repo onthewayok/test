@@ -9,10 +9,30 @@ git rm -f <file>	把文件从staging区和工作区都删除
 如果直接从系统通过r -rf <file> 删除文件，需要通过上述命令同步git的状态
 
 
+git reset 的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，会丢掉后面的版本
+此时如果用“git push”会报错，因为我们本地库HEAD指向的版本比远程库的要旧，所以我们要用“git push -f”强制推上去
+
+git reset (–-mixed) HEAD~1 
+回退一个版本,且会将暂存区的内容和本地已提交的内容全部恢复到未暂存的状态,不影响原来本地文件(未提交的也 
+不受影响) 
+git reset –-soft HEAD~1 
+回退一个版本,不清空暂存区,将已提交的内容恢复到暂存区,不影响原来本地的文件(未提交的也不受影响) 
+git reset –-hard HEAD~1 
+回退一个版本,清空暂存区,将已提交的内容的版本恢复到本地,本地的文件也将被恢复的版本替换
+
+git reset –-mixed：此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息
+git reset –-soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可
+git reset –-hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容
+
 git reset --hard HEAD	任何情况下，真正回到上一次提交状态
 
+git revert 的作用通过反做创建一个新的版本，这个版本的内容与我们要回退到的目标版本一样，
+			但是HEAD指针是指向这个新生成的版本，而不是目标版本。如下图所示，假设我们要回退到版本一，
+			版本四的内容和版本一是一样的
+使用“git revert -n 版本号 注意： 这里可能会出现冲突，那么需要手动修改冲突的文件。而且要git add 文件名， 使用“git commit -m 版本名
 
-git commit --amend -m "test comment"	更新上一次的提交（注释内容等）
+
+git commit --amend -m "test comment"	更新上一次的提交（注释内容等），可用于本地合并多个commit为一个最终这个而一个commit
 
 
 git stash	将当前分支未提交的内容（没做完）放入一个区域，用于不影响切换到其他分支工作
@@ -30,6 +50,26 @@ git show <hashcode>	查看指定的操作日志
 git cat-file -p <hashcode> 查看对象tree信息等相关内容
 
 git checkout <file>	还原被删除（修改）的文件
+
+git push <远程主机名> <本地分支名>:<远程分支名>
+
+git push -u origin master 将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了
+
+git push origin :master # 等同于 git push origin --delete master 表示删除origin主机的master分支
+
+git branch -d temp 删除本地分支
+
+1. git merge --squash devel 合并devel上的多个commit为一个commit到当前分支上，并且当前分支需要commit一次，也就是改变了 commit 的 author为当前分支的
+
+2.先切换到 devel 分支（不一样咯）：git checkout devel
+变基：git rebase -i master
+切换回目标分支：git checkout master
+合并: git merge devel
+这里完成了第二步之后我想你应该大概知道发生了什么事了，我们在 devel 里面对照 master 进行了变基，
+所谓的变基其实就是找到两个分支共同的祖先，然后在当前分支上合并从共同祖先到现在的所有 commit，
+所以我们在第二步的时候会选择怎么处理这些 commit，然后我们就得到了一个从公共commit 到现在的单个 commit，
+这个时候别人讲我们这个 commit 合并到 master 也只会在 master 上留下一个 commit 记录
+
 
 git log --graph --pretty=format:"%Cblue%ci - %Cred%h - %C(yellow)%ae%Creset(%an) %Cgreen%s (%Cred%ar)"
 
