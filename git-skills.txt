@@ -57,6 +57,17 @@ git push -u origin master 将本地的master分支推送到origin主机，同时
 
 git push origin :master # 等同于 git push origin --delete master 表示删除origin主机的master分支
 
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
 git branch -d temp 删除本地分支
 
 1. git merge --squash devel 合并devel上的多个commit为一个commit到当前分支上，并且当前分支需要commit一次，也就是改变了 commit 的 author为当前分支的
