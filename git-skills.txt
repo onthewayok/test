@@ -72,6 +72,8 @@ git push origin :master # 等同于 git push origin --delete master 表示删除
 删除分支：git branch -d <name>
 git branch -d temp 删除本地分支
 
+删除远程分支: git push origin --delete [branchname]
+
 1. git merge --squash devel 合并devel上的多个commit为一个commit到当前分支上，并且当前分支需要commit一次，也就是改变了 commit 的 author为当前分支的
 
 2.先切换到 devel 分支（不一样咯）：git checkout devel
