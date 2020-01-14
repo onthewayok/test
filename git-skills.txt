@@ -186,6 +186,8 @@ warning: You appear to have cloned an empty repository.
 * git 远程仓库操作相关
 git remote -v  查看远程连接(远程仓库)配置
 
+git branch -a 查看所有分支，包括本地分支和远程分支
+
 git remote rm origin  删除远程连接(远程仓库)配置
 
 git remote add origin git@github.com:yourName/repositoryname.git 添加远程连接(远程仓库)配置
