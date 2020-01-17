@@ -1,0 +1,68 @@
+转录自：https://www.zhihu.com/question/24834285/answer/251369977
+ 
+
+ 
+
+作者：魔王不造反
+biezhi/blade：先推荐下自己的哈哈，一款轻量级、高性能、简洁优雅的MVC框架
+scribejava/scribejava：一个简单的 Java 实现的 OAuth/OAuth2 库
+winterbe/java8-tutorial：绝对值得一看的Java8指南、教程
+javaee-samples/javaee7-samples：如果你对Java7的骚操作还不熟，赶紧看看
+kdn251/interviews：Java面试题和答案（英文）
+phishman3579/java-algorithms-implementation：Java数据结构和算法实现
+aaberg/sql2o：小而美的数据库操作框架，性能略屌
+jankotek/mapdb：一个快速且易于使用的嵌入式Java数据库引擎
+socketio/socket.io-client-java：http://Socket.IO的Netty实现（做聊天室可以用）
+nkcoder/quartz-explained：对定时任务调度框架quartz源码的分析和注释
+hankcs/HanLP：强大的自然语言处理、中文分词库，国人开发
+atomashpolskiy/bt：Java种子下载程序（我什么都不知道啊）
+ihaolin/diablo：分布式配置管理平台（看过代码，值得品读）
+mpatric/mp3agic：Java版本的MP3音频处理库
+atlassian/commonmark-java：Java版本的markdown处理库
+biezhi/telegram-bot-api： Java版 telegram api，帮你快速创建小机器人
+vdurmont/emoji-java：将emoji表情和Unicode互相转换的库（一颗赛艇）
+v5developer/maven-framework-project：使用Maven搭建了N个例子的大而全的工程
+iluwatar/java-design-patterns：学习设计模式，它一定是你的不二选择
+korhner/asciimg：用Java编写的ascii图像生成器
+aragozin/jvm-tools：JVM诊断和分析工具
+wuyinxian124/nettybook2：李林峰老师编写的netty权威指南（第二版）对应的源码
+deeplearning4j/deeplearning4j：还是推荐一下这个深度学习库吧，未来也可能会火
+dyc87112/SpringCloud-Learning：SpringCloud的学习笔记和示例
+subchen/jetbrick-template-2x：高性能和高扩展性的模板引擎
+looly/hutool：Java的工具类实现，非常全，有中文注释
+dropwizard/metrics：让你能够洞察你的代码在生产环境做了些什么
+ 
+
+作者：EZLippi
+shardingjdbc/sharding-jdbc：数据库分库分表、读写分离的一个中间件
+spring-projects/spring-loaded：spring开源的一个热替换插件,运行时监听class文件的变更并执行transform
+HotswapProjects/HotswapAgent:也是一个热替换的插件，支持Tomcat、OSGI、JBoss、Jetty等集成
+rzwitserloot/lombok：自动生成代码的一个工具，提高开发效率
+grpc/grpc-java：rpc框架java实现
+elastic/elasticsearch:分布式全文检索框架
+EZLippi/ezRpc:基于zookeeper和netty做的一个简单的rpc框架
+alibaba/dubbo:阿里巴巴分布式RPC治理框架,最近又重新开始维护了
+square/okio：高性能的IO库
+google/guava:Google提供的java库函数,guava cache和guava限流的实现很有参考价值
+square/okhttp：square提供的http客户端
+ReactiveX/RxJava:java平台的Reactive 扩展
+ 
+
+再付一些自己整理的开源项目：
+
+作者：zerah (没错，就是我了)，github:ZerahMu(可以直接看我有哪些star)
+shuzheng/zheng  ：公共微服务服务模块
+guanpengchn/awesome-books ：开发者推荐阅读的书籍
+elunez/eladmin：后台管理系统（做毕设的重点关注，嘻嘻嘻）
+MisterBooo/LeetCodeAnimation ：用动画的形式呈现解LeetCode题目的思路
+developer-learning/reading-go：Go 夜读 > 每周通过 zoom 在线直播的方式分享 Go 相关的技术话题
+jaywcjlove/linux-command：Linux命令大全搜索工具
+iodefog/VipVideo-iPhone：iPhone 各大网站vip视频免费观看等
+Y1ran/Free-VPN-for-Coursera：? ?免费开源的科学上网工具
+996icu/996.ICU：哈哈哈哈哈哈哈哈哈哈
+CriseLYJ/awesome-python-login-model：?python模拟登陆一些大型网站，还有一些简单的爬虫
+CyC2018/CS-Notes：强烈推荐，就不告诉你是啥了，看你好奇心了
+Snailclimb/JavaGuide：【Java学习+面试指南】
+————————————————
+版权声明：本文为CSDN博主「ZerahMu」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/NathanniuBee/article/details/91126527
