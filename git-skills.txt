@@ -51,6 +51,7 @@ git cat-file -p <hashcode> 查看对象tree信息等相关内容
 
 git checkout <file>	还原被删除（修改）的文件
 
+############ 分支相关操作 begin ############
 git push <远程主机名> <本地分支名>:<远程分支名>
 
 git push -u origin master 将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了
@@ -73,6 +74,21 @@ git push origin :master # 等同于 git push origin --delete master 表示删除
 git branch -d temp 删除本地分支
 
 删除远程分支: git push origin --delete [branchname]
+git branch -d branch_name
+
+删除远程分支
+git branch -r -d origin/branch-name  
+git push origin :branch-name 
+
+# 本地分支和远程分支关联
+如果远程新建了一个分支，本地没有该分支。
+可以利用 git checkout --track origin/branch_name ，这时本地会新建一个分支名叫 branch_name ，会自动跟踪远程的同名分支 branch_name。
+git checkout --track origin/branch_name
+
+如果本地新建了一个分支 branch_name，但是在远程没有。
+这时候 push 和 pull 指令就无法确定该跟踪谁，一般来说我们都会使其跟踪远程同名分支，所以可以利用 git push --set-upstream origin branch_name ，这样就可以自动在远程创建一个 branch_name 分支，然后本地分支会 track 该分支。后面再对该分支使用 push 和 pull 就自动同步。
+git push --set-upstream origin branch_name
+
 
 1. git merge --squash devel 合并devel上的多个commit为一个commit到当前分支上，并且当前分支需要commit一次，也就是改变了 commit 的 author为当前分支的
 
@@ -85,6 +101,7 @@ git branch -d temp 删除本地分支
 所以我们在第二步的时候会选择怎么处理这些 commit，然后我们就得到了一个从公共commit 到现在的单个 commit，
 这个时候别人讲我们这个 commit 合并到 master 也只会在 master 上留下一个 commit 记录
 
+############ 分支相关操作 end ############
 
 git log --graph --pretty=format:"%Cblue%ci - %Cred%h - %C(yellow)%ae%Creset(%an) %Cgreen%s (%Cred%ar)"
 
