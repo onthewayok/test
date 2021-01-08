@@ -228,6 +228,10 @@ git remote rm origin  删除远程连接(远程仓库)配置
 
 git remote add origin git@github.com:yourName/repositoryname.git 添加远程连接(远程仓库)配置
 
+* git 更新远程分支列表
+git remote update origin --prune
+
+git remote update origin -p
 
 
 
