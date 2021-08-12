@@ -103,6 +103,10 @@ git checkout --track origin/branch_name
 这时候 push 和 pull 指令就无法确定该跟踪谁，一般来说我们都会使其跟踪远程同名分支，所以可以利用 git push --set-upstream origin branch_name ，这样就可以自动在远程创建一个 branch_name 分支，然后本地分支会 track 该分支。后面再对该分支使用 push 和 pull 就自动同步。
 git push --set-upstream origin branch_name
 
+#新建本地分支与远程分支关联
+git branch –set-upstream 本地新建分支名 origin/远程分支名
+例如：git branch –set-upstream dev origin/dev，把本地dev分支和远程dev分支相关联。
+
 # git 查看本地分支和远程分支的关联（跟踪）关系
 git branch -vv
 
